@@ -19,5 +19,22 @@
             <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/index_old.xhtml</file>
             <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/viewAllRoles.xhtml</file>
         </group>
+        <group name="Group 20160217-02:19:34">
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/UserAccessControlModule/viewAllPrivileges.xhtml</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/addNewRole.xhtml</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/src/java/managedbean/RoleDataTableBean.java</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/UserAccessControlModule/viewAllRoles.xhtml</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/UserAccessControlModule/index.xhtml</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/templates/tiles/LeftMenu.xhtml</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/src/java/managedbean/SelectBooleanView.java</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/Login.xhtml</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/src/java/managedbean/RoleManagerBean.java</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/index.xhtml</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/templates/layout.xhtml</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/index_old.xhtml</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/UserAccessControlModule/addNewRole.xhtml</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-war/web/viewAllRoles.xhtml</file>
+        </group>
     </open-files>
 </project-private>
