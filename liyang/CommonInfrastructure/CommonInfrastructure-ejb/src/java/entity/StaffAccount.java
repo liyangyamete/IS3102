@@ -23,11 +23,11 @@ public class StaffAccount implements Serializable {
     private String email;
     private String contactNumber;
 
-    public Long getSystemUserId() {
+    public Long getStaffAccountId() {
         return staffAccountId;
     }
 
-    public void setStaffAccountId(Long systemUserId) {
+    public void setStaffAccountId(Long staffAccountId) {
         this.staffAccountId = staffAccountId;
     }
 
@@ -35,7 +35,7 @@ public class StaffAccount implements Serializable {
         return staffAccountName;
     }
 
-    public void setStaffAccountName(String userName) {
+    public void setStaffAccountName(String staffAccountName) {
         this.staffAccountName = staffAccountName;
     }
 

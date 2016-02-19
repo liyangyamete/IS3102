@@ -22,6 +22,11 @@ public class StaffAccountSessionBean {
         Query query = entityManager.createQuery("SELECT p FROM Privilege p");
         return query.getResultList();
     }
+    
+    public List<StaffAccount> getAllStaffAccounts(){
+        Query query = entityManager.createQuery("SELECT s FROM StaffAccount s");
+        return query.getResultList();
+    }
 
     public List<String> getAllPrivilegeNames() {
         Query query = entityManager.createQuery("SELECT p.privilegeName FROM Privilege p");
@@ -56,6 +61,12 @@ public class StaffAccountSessionBean {
         return query.getResultList();
     }
 
+    
+    public List<Role> getRole(String name){
+        return entityManager.createQuery("SELECT r FROM Role r WHERE r.roleName LIKE :rolename").setParameter("rolename", name).getResultList();
+       
+    }
+
     public Role getMyRole(Long staffAccountId) {
         StaffAccount staffAccount = getStaffAccount(staffAccountId);
         return staffAccount.getRole();
@@ -76,4 +87,22 @@ public class StaffAccountSessionBean {
         role = entityManager.find(Role.class, seletedRole.getRoleId());
         entityManager.remove(role);
     }
+
+    public Long addNewStaffAccount(String email, String staffAccountName, String contactNumber, String name) {
+        StaffAccount staffAccount = new StaffAccount();
+        staffAccount.setPassword("password");
+        staffAccount.setEmail(email);
+        staffAccount.setStaffAccountName(staffAccountName);
+        staffAccount.setContactNumber(contactNumber);
+        staffAccount.setRole(getRole(name).get(0));
+        entityManager.persist(staffAccount);
+        entityManager.flush();
+        return staffAccount.getStaffAccountId();
+    }
+        public void deleteStaffAccount(StaffAccount selectedStaffAccount) {
+        StaffAccount staffAccount;
+        staffAccount = entityManager.find(StaffAccount.class, selectedStaffAccount.getStaffAccountId());
+        entityManager.remove(staffAccount);
+    }
+    
 }

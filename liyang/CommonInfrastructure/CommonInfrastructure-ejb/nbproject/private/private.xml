@@ -11,11 +11,13 @@
         </group>
         <group name="Group 20160217-02:19:34">
             <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-ejb/src/java/session/stateless/RoleSessionBeanLocal.java</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-ejb/src/java/session/stateless/StaffAccountSessionBeanLocal.java</file>
             <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-ejb/src/conf/persistence.xml</file>
             <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-ejb/src/java/entity/Privilege.java</file>
             <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-ejb/src/java/session/stateless/RoleSessionBean.java</file>
             <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-ejb/setup/sun-resources.xml</file>
             <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-ejb/src/java/entity/Role.java</file>
+            <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-ejb/src/java/session/stateless/StaffAccountSessionBean.java</file>
             <file>file:/C:/Users/Computer/Documents/NetBeansProjects/CommonInfrastructure/CommonInfrastructure-ejb/src/java/entity/StaffAccount.java</file>
         </group>
     </open-files>

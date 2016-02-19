@@ -1,6 +1,7 @@
 package managedbean;
 
 import entity.Role;
+import entity.StaffAccount;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -26,10 +27,16 @@ public class StaffAccountManagerBean {
     private String statusMessage;
     private Long newStaffAccountId;
     private String role;
-    private List<String> roles = staffAccountSessionBean.getAllRoleNames();
+    private List<String> roleNames;
+    private List <Role>roles =  new ArrayList<Role>();
 
     public StaffAccountManagerBean() {
         emailLength = "Current staff name length is less than 4.";
+        //roles = staffAccountSessionBean.getAllRoles();
+        //int i = 0;
+        //for (i=0; i < roles.size(); i++){
+            //roleNames.add(roles.get(i).getRoleName());
+        //}
     }
 
     public StaffAccountSessionBean getStaffAccountSessionBean() {
@@ -104,22 +111,29 @@ public class StaffAccountManagerBean {
         this.role = role;
     }
 
-    public List<String> getRoles() {
+       public List<String> getRoleNames() {
+        return roleNames;
+    }
+
+    public void setRoleNames(List<String> roleNames) {
+        this.roleNames = roleNames;
+    }
+
+    public List<Role> getRoles() {
         return roles;
     }
 
-    public void setRoles(List<String> roles) {
+    public void setRoles(List<Role> roles) {
         this.roles = roles;
     }
+ 
     
-    
-    //public void saveNewRole(ActionEvent event) {
-        //newRoleId = roleSessionBean.addNewRole(roleName, value1, value2, value3, value4, value5, value6, value7, value8, 
-                //value9, value10, value11, value12, value13, value14, value15, value16, value17, value18, value19, value20,
-                //value21, value22, value23, value24, value25, value26, value27);
-        //statusMessage = "New Role Saved Successfully";
-        //FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Add New Role Result: "
-                //+ statusMessage + " (New Role ID is " + newRoleId + ")", ""));
+    public void saveNewStaffAccount(ActionEvent event) {
+        newStaffAccountId = staffAccountSessionBean.addNewStaffAccount(email, staffAccountName, contactNumber, role);
+        statusMessage = "New Staff Account Saved Successfully";
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Add New Staff Account Result: "
+                + statusMessage + " (New Staff Account ID is " + newStaffAccountId + ")", ""));
+
 
     }   
-//}
+}

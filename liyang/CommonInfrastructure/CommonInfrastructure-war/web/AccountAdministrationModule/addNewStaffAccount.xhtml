@@ -8,7 +8,7 @@
 
     <ui:define name="content">
         <h:form id="formMain">
-            <p:panel id="panel" header="Add New Staff">
+            <p:panel id="panel" header="Add New Staff Account">
                 <p:ajaxStatus style="width:16px;height:16px;">
                     <f:facet name="start">
                         <h:graphicImage value="/images/spinner.gif" />
@@ -71,11 +71,11 @@
                     <p:outputLabel for="role" value="Role: " />
                     <p:selectOneMenu id="role" value="#{staffAccountManagerBean.role}">
                         <f:selectItem itemLabel="Select One" itemValue="" />
-                        <f:selectItems value="#{staffAccountManagerBean.roles}" />
+                        <f:selectItems value="#{roleDataTableBean.roles}" />
                     </p:selectOneMenu>
                 </p:panelGrid>
                 <p:commandButton id="btn" value="Save New Staff Account"
-                                 update="panel" actionListener="#{roleManagerBean.saveNewRole}" ajax="true"
+                                 update="panel" actionListener="#{staffAccountManagerBean.saveNewStaffAccount}" ajax="true"
                                  />
             </p:panel>
         </h:form>
