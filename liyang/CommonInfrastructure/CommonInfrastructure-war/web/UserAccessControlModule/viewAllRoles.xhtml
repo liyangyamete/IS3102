@@ -15,10 +15,6 @@
                 <p:dataTable id = "roles" var="role" value="#{roleDataTableBean.roles}"
                              paginator="true" rows="10" emptyMessage="No role" rowKey="#{role.roleId}"
                  selection="#{roleDataTableBean.selectedRole}" selectionMode="single">
-                    <p:column headerText="Role ID"
-                              sortBy="#{rold.roleId}">
-                        <h:outputText value="#{role.roleId}" />
-                    </p:column>
                     <p:column headerText="Role Name"
                               sortBy="#{role.roleName}">
                         <h:outputText value="#{role.roleName}" />

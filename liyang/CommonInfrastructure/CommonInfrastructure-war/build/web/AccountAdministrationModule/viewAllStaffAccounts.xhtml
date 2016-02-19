@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/templates/layout.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="content">
+        <h:form id="formMain">
+            <p:panel header="View All Roles">
+                <p:contextMenu for="roles">
+                    <p:menuitem value="Delete" update="roles" icon="ui-icon-close" actionListener="#{roleDataTableBean.deleteRole}"/>
+                </p:contextMenu>
+                <p:dataTable id = "roles" var="role" value="#{roleDataTableBean.roles}"
+                             paginator="true" rows="10" emptyMessage="No role" rowKey="#{role.roleId}"
+                 selection="#{roleDataTableBean.selectedRole}" selectionMode="single">
+                    <p:column headerText="Role ID"
+                              sortBy="#{rold.roleId}">
+                        <h:outputText value="#{role.roleId}" />
+                    </p:column>
+                    <p:column headerText="Role Name"
+                              sortBy="#{role.roleName}">
+                        <h:outputText value="#{role.roleName}" />
+                    </p:column>
+                    <p:column headerText="List of Privileges"
+                              sortBy="#{role.listOfPrivileges}">
+                        <h:outputText value="#{role.listOfPrivileges}" />
+                    </p:column>
+                </p:dataTable>
+            </p:panel>
+        </h:form>
+    </ui:define>
+    <ui:define name ="left">
+        <h:form>
+            <p:growl id="messages" /> 
+            <p:menu style="width:95%" >
+                <p:menuitem value="Logout" action="/index.xhtml" icon="ui-icon-power"/>
+                <p:menuitem value="Home" action="/UserAccessControlModule/index" icon="ui-icon-home"/>
+                <p:menuitem value="Add New Role" action="/UserAccessControlModule/addNewRole" icon="ui-icon-plus"/>
+                <p:menuitem value="View All Privileges" action="/UserAccessControlModule/viewAllPrivileges" icon="ui-icon-search"/>
+            </p:menu>
+        </h:form>
+    </ui:define>
+
+</ui:composition>
